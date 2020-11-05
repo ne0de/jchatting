@@ -1,7 +1,6 @@
 # JChatting
 
-Pagina web para chatear de forma sencilla.
+Pagina web para chatear de forma sencilla utilizando express, handlebars, tokens y socket.io
 
-# Imagenes
-## Inicio
+## Imagenes
 ![alt text](https://github.com/ne0de/jchatting/blob/main/img/Main.jpg)
