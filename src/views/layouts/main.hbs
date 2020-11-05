@@ -1,0 +1,117 @@
+<body>
+    <script src="https://kit.fontawesome.com/4657d46491.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <header>
+        <div id="myNav" class="menu">
+            <div class="menu-content">
+                <a href="#">Acceder</a>
+                <a href="#">Registrar</a>
+                <a href="#">Sobre nosotros</a>
+                <div class="d-flex flex-row">
+                    <a href="#">Siguenos</a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-top" style="top:15px; left: 15px;">
+            <a class="btn-lg text-light" id="openNav">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+
+    </header>
+
+    <main class="container">
+        {{{body}}}
+    </main>
+
+    <footer>
+        <nav class="footer-inner">
+            <section class="footer-item">
+                <h1>JUST CHATTING</h1>
+
+                <h2>Creando posibilidades<br>para una mejor <br><b class="color">comunicación.</b></h2>
+            </section>
+
+            <section class="footer-item">
+                <h3 class="text-primary">Explora</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-item">
+                <h3 class="text-primary"> Siguenos </h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-item">
+            </section>
+            <section class="footer-item">
+            </section>
+
+            <section class="footer-item">
+                <h3 class="text-primary">Legal</h3>
+                <ul>
+                    <li><a href="#">Términos</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-item">
+                <a href="#" class="footer-button">Registrarme</a>
+            </section>
+
+        </nav>
+    </footer>
+
+    <script>
+        class AnimatedNavbar {
+            constructor(navId, buttonId) {
+                this.navbar = document.getElementById(navId);
+                this.button = document.getElementById(buttonId);
+                this.status = 'closed';
+                this.init();
+            }
+            init() {
+                this.button.addEventListener('click', () => { this.action(); });
+            }
+            action() {
+                if (this.status == 'closed') {
+                    this.open();
+                    this.changeButtonToClose();
+                } else {
+                    this.close();
+                    this.changeButtonToOpen();
+                }
+            }
+            open() {
+                this.navbar.style.width = '10%';
+                this.status = 'open';
+            }
+            close() {
+                this.navbar.style.width = '0%';
+                this.status = 'closed';
+            }
+            changeButtonToOpen() {
+                this.button.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+            changeButtonToClose() {
+                this.button.innerHTML = '<i class="fas fa-times"></i>';
+            }
+
+        }
+
+        let nav = new AnimatedNavbar('myNav', 'openNav');
+    </script>
+</body>
